@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    background-color: hsl(240, 5%, 91%);
+    border: none;
+    height: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    width: 350px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.faq {
+    margin: 120px 10px 0;
+}
+
+.image {
+    position: absolute;
+    top: -110px;
+}
+
+.bg {
+    position: absolute;
+    left: 30px;
+    top: -10px;
+}
+
+.dropdown-content {
+    display: none;
+    color: hsl(237, 12%, 33%);
+    padding: 3px 0 0 3px;
+    width: 300px;
+    transition: all .5s ease-in-out;
+}
+
+.desktop {
+    display: none;
+}
+
+
+
+/* /////// Desktop mode ////// */
+
+@media (min-width: 990px) {
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        margin-bottom: 200px; 
+    }
+
+    .card {
+        display: flex;
+        justify-content: space-around;
+        
+        width: 900px;
+        position: relative;
+        overflow: hidden;
+        height: 420px;
+    }
+
+    /* .faq {
+        margin-left: 200px;
+    } */
+
+    .desktop {
+        display: block;
+        position: absolute;
+    }
+    
+    .mobile {
+        display: none;
+    }
+    
+    .box {
+        top: 285px;
+        left: 140px;
+        z-index: 4;
+    }
+
+    .image {
+        z-index: 3;
+        top: 10px;
+        left: -520px;
+    }
+
+    .bg {
+        z-index: 2;
+        top: -345px;
+        left: -1000px;
+    }
+
+    .faq {
+        margin: 15px 0 0 400px;
+        
+    }
+}
